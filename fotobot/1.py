@@ -3,6 +3,8 @@ import time
 # from selenium.webdriver.common.keys import Keys
 import random
 
+
+
 # предварительные настройки
 driver = webdriver.Chrome()
 driver.set_window_size(1600, 900)
