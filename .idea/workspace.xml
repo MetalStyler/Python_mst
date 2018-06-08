@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed3f10ba-c8f0-4a66-b202-e2fff8359b1d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HHeroes/venv/Lib/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HHeroes/venv/Lib/site-packages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HHeroes/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HHeroes/venv/Scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HHeroes/venv/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +30,7 @@
         </entry>
       </file>
       <file leaf-file-name="Code1" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+        <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
               <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
@@ -34,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hheroes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+      <file leaf-file-name="Hheroes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="58" column="39" selection-end-line="70" />
+            <state relative-caret-position="98">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -46,8 +50,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hheroes_test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../HHeroes/hheroes_test.py">
+      <file leaf-file-name="hheroes_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HHeroes/hheroes_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="404">
               <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
@@ -111,10 +115,6 @@
               <item name="my_own" type="462c0819:PsiDirectoryNode" />
               <item name="HH" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my_own" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HHeroes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -125,6 +125,11 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MetalStyler\PycharmProjects\my_own" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528187363196</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="HH clicker">
+      <created>1528434030850</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528434030850</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -271,14 +283,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1911942" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1911942" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005952" side_tool="true" weight="0.32821077" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32995495" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32995495" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49940476" visible="true" weight="0.3186937" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" visible="true" weight="0.3186937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32995495" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -305,7 +316,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../HHeroes/hheroes_test.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/hheroes_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
@@ -325,14 +336,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="58" column="39" selection-end-line="70" />
@@ -342,7 +353,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/hheroes_test.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/hheroes_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="40" column="133" selection-start-line="40" selection-start-column="133" selection-end-line="40" selection-end-column="133" />
@@ -362,14 +373,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="58" column="39" selection-end-line="70" />
@@ -379,7 +390,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/hheroes_test.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/hheroes_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
@@ -399,14 +410,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
@@ -426,14 +437,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
@@ -453,14 +464,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
@@ -480,7 +491,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="69" selection-end-line="69" />
@@ -497,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
@@ -514,7 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="69" selection-end-line="69" />
@@ -531,7 +542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
@@ -548,7 +559,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="69" selection-end-line="69" />
@@ -575,7 +586,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="69" selection-end-line="69" />
@@ -602,7 +613,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="69" lean-forward="true" selection-end-line="69" />
@@ -636,7 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="36" />
@@ -712,34 +723,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Code1">
+    <entry file="file://$PROJECT_DIR$/HHeroes/Code1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/Hheroes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="58" column="39" selection-end-line="70" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/venv/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/venv/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="829">
           <caret line="278" column="8" selection-start-line="278" selection-start-column="8" selection-end-line="278" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HHeroes/hheroes_test.py">
+    <entry file="file://$PROJECT_DIR$/HHeroes/hheroes_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HHeroes/Hheroes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
