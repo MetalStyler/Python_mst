@@ -60,17 +60,15 @@ for i in range(1, 20):
                 (By.XPATH, '//div[@id="battle_win"]/button[@class="blue_text_button"][text()= " Ok "]')))
             driver.find_element_by_xpath(
                 '//div[@id="battle_win"]/button[@class="blue_text_button"][text()= " Ok "]').click()
-            print("Потрачен 1 шанс, победа")
         except:
             element = wait.until(EC.element_to_be_clickable(
                 (By.XPATH, '//div[@id="battle_lose"]/button[@class="blue_text_button"][text()= " Ok "]')))
             driver.find_element_by_xpath(
                 '//div[@id="battle_lose"]/button[@class="blue_text_button"][text()= " Ok "]').click()
-            print("Потрачен 1 шанс, проигрыш")
         chances = chances + 1
-
     except Exception as e:
         print('Ошибка:\n', traceback.format_exc())
 
-    print("Потрачено " + chances + " шансов")
+chances = str(chances)
+print("Потрачено " + chances + " шансов")
 driver.close()
