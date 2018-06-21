@@ -43,17 +43,17 @@ driver.find_element_by_css_selector('#breadcrumbs > a:nth-child(5)').click()
 chances = 0
 
 # проводим файты
-for i in range(1, 20):
+for i in range(1, 21):
     try:
         # стартуем файт и скипаем бой
         element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="worldmap"]/a[8]')))
         driver.find_element_by_xpath('//*[@id="worldmap"]/a[8]').click()
         # time.sleep(1)
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="battle_middle"]/button[1]')))
-        driver.find_element_by_xpath('//button[@class="green_text_button"]').click()
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="battle_middle"]/button[1]/span/span')))
+        driver.find_element_by_xpath('//*[@id="battle_middle"]/button[1]/span/span').click()
         # time.sleep(1)
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="battle_middle"]/button[2]')))
-        driver.find_element_by_xpath('//*[@id="battle_middle"]/button[2]').click()
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="battle_middle"]/button[3]')))
+        driver.find_element_by_xpath('//*[@id="battle_middle"]/button[3]').click()
         time.sleep(1)
         try:
             element = wait.until(EC.element_to_be_clickable(
