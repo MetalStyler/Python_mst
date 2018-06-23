@@ -10,8 +10,12 @@ import time
 # настройки драйвера
 capa = DesiredCapabilities.CHROME
 capa["pageLoadStrategy"] = "none"
-driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\HHeroes\\chromedriver.exe',
-                          desired_capabilities=capa)
+chromeOptions = webdriver.ChromeOptions()
+prefs = {"profile.managed_default_content_settings.images":2}
+chromeOptions.add_experimental_option("prefs",prefs)
+# driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\my_own\\HH\\chromedriver.exe')
+driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\my_own\\HH\\chromedriver.exe',
+                          chrome_options=chromeOptions, desired_capabilities=capa)
 driver.set_window_size(1280, 1024)
 wait = WebDriverWait(driver, 10)
 

@@ -5,16 +5,20 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.common.exceptions import TimeoutException
 import traceback
-import datetime
 import time
 
 # настройки драйвера
 capa = DesiredCapabilities.CHROME
 capa["pageLoadStrategy"] = "none"
-driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\HHeroes\\chromedriver.exe',
-                          desired_capabilities=capa)
-driver.set_window_size(1280, 1024)
-wait = WebDriverWait(driver, 10)
+chromeOptions = webdriver.ChromeOptions()
+prefs = {"profile.managed_default_content_settings.images":2}
+chromeOptions.add_experimental_option("prefs",prefs)
+# driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\my_own\\HH\\chromedriver.exe')
+driver = webdriver.Chrome('C:\\Users\MetalStyler\\PycharmProjects\\my_own\\HH\\chromedriver.exe',
+                          chrome_options=chromeOptions, desired_capabilities=capa)
+# driver.set_window_size(1280, 1024)
+# driver.set_window_size(450, 250)
+wait = WebDriverWait(driver, 30)
 
 # переходим на сайт, пытаемся отловить и закрыть алерт
 driver.get("http://hentaiheroes.com")
@@ -29,13 +33,13 @@ except TimeoutException:
 # логинимся
 element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="hh_game"]')))
 driver.switch_to.frame(driver.find_element_by_css_selector('#hh_game'))
+element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="contains_all"]/header/div/a[1]')))
 driver.find_element_by_xpath('//*[@id="contains_all"]/header/div/a[1]').click()
 driver.find_element_by_xpath('//*[@id="popup_login_form"]/form/div/input[1]').send_keys('metalstyler@gmail.com')
 driver.find_element_by_xpath('//*[@id="popup_login_form"]/form/div/input[2]').send_keys('A217427h')
 driver.find_element_by_css_selector('#popup_login_form > form > div > div:nth-child(14) > button').click()
 
-
-# ставим счетчик дейликов на 0
+# ставим счетчик выполненных дейликов на 0
 dailies_count = 0
 
 # переходим к дейликам
@@ -46,11 +50,16 @@ driver.find_element_by_xpath('//*[@id="homepage"]/a[7]/div/span').click()
 money_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[6]/div/span').text
 coins_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[7]/div/span').text
 
-# запускаем цикл выполнения дейликов
-for i in range (1, 100):
-    # выбираем первый дейлик, берем его время, ждем, пока выполннится и завершаем
-    try:
-        try:
+# получаем количество дейликов
+element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]')))
+quests = driver.find_elements_by_xpath('//*[@id="missions"]/div/div[7]/div[contains(@class, "mission_object")]')
+quests = int(len(quests))
+
+try:
+    # пытаемся выполнить первый в списке дейлик
+    if quests > 0:
+        for i in range(0, quests):
+            # считаем время на выполнение
             element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]/'
                                                                        'div[1]/div[4]/button[1]')))
 
@@ -71,31 +80,32 @@ for i in range (1, 100):
             print(m, s)
             daily_time = (m * 60) + s
             print(daily_time)
-
+            # стартуем, ждем, завершаем
             driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]').click()
-            time.sleep(daily_time)
+            time.sleep(daily_time+10)
             element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]/'
                                                                        'div[1]/div[4]/button[3]')))
             driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[3]').click()
             element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions_rewards"]/button')))
+            element = wait.until(EC.element_located_to_be_selected((By.XPATH, '//*[@id="missions_rewards"]/button')))
             driver.find_element_by_xpath('//*[@id="missions_rewards"]/button').click()
             # прибавляем 1 к количеству выполненных дейликов
             dailies_count = dailies_count + 1
-        except:
-            element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[6]/button')))
-            driver.find_element_by_xpath('//*[@id="missions"]/div/div[6]/button').click()
-    except Exception as e:
-        print('Ошибка:\n', traceback.format_exc())
+    else:
+        element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[6]/button')))
+        driver.find_element_by_xpath('//*[@id="missions"]/div/div[6]/button').click()
 
-# считаем количество полученных денег и монеток
-money_amount2 = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[6]/div/span').text
-money_got = int(money_amount2) - int(money_amount)
-coins_amount2 = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[7]/div/span').text
-coins_got = int(coins_amount2) - int(coins_amount)
+except Exception as e:
+    print('Ошибка:\n', traceback.format_exc())
 
-# выводим количество выполненных дейликов и полученных денег, монеток
-dailies_count = str(dailies_count)
-print("Выполнено дейликов: " + dailies_count)
-print(money_got)
-print(coins_got)
+# # считаем количество полученных денег и монеток
+# money_amount2 = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[6]/div/span').text
+# money_got = int(money_amount2) - int(money_amount)
+# coins_amount2 = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[7]/div/span').text
+# coins_got = int(coins_amount2) - int(coins_amount)
 
+# # выводим количество выполненных дейликов и полученных денег, монеток
+# dailies_count = str(dailies_count)
+# print("Выполнено дейликов: " + dailies_count)
+# print(money_got)
+# print(coins_got)
