@@ -47,12 +47,12 @@ element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="homepage"]/
 driver.find_element_by_xpath('//*[@id="homepage"]/a[7]/div/span').click()
 
 # проверяем количество денег и монеток
-money_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[6]/div/span').text
-coins_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[7]/div/span').text
+# money_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[6]/div/span').text
+# coins_amount = driver.find_element_by_xpath('//*[@id="contains_all"]/header/div[7]/div/span').text
 
 # получаем количество дейликов
-element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]')))
-quests = driver.find_elements_by_xpath('//*[@id="missions"]/div/div[7]/div[contains(@class, "mission_object")]')
+element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="contains_all"]/section/div[3]/h4[2]')))
+quests = driver.find_elements_by_xpath('//*[@id="missions"]/div/div[4]/div[contains(@class, "mission_object")]')
 quests = int(len(quests))
 
 try:
@@ -60,19 +60,19 @@ try:
     if quests > 0:
         for i in range(0, quests):
             # считаем время на выполнение
-            element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]/'
+            element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[4]/'
                                                                        'div[1]/div[4]/button[1]')))
 
-            m1 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]/'
+            m1 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[4]/div[1]/div[4]/button[1]/'
                                               'span/monospace/m[1]')
             m1 = m1.text
-            m2 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]/'
+            m2 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[4]/div[1]/div[4]/button[1]/'
                                               'span/monospace/m[2]')
             m2 = m2.text
-            s1 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]/'
+            s1 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[4]/div[1]/div[4]/button[1]/'
                                               'span/monospace/m[3]')
             s1 = s1.text
-            s2 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]/'
+            s2 = driver.find_element_by_xpath('//*[@id="missions"]/div/div[4]/div[1]/div[4]/button[1]/'
                                               'span/monospace/m[4]')
             s2 = s2.text
             m = int(m1 + m2)
@@ -81,19 +81,18 @@ try:
             daily_time = (m * 60) + s
             print(daily_time)
             # стартуем, ждем, завершаем
-            driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[1]').click()
+            driver.find_elements_by_xpath('//div[@class="mission_button"]/button[@class="blue_text_button"]')[0].click()
             time.sleep(daily_time+10)
-            element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[7]/'
+            element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[4]/'
                                                                        'div[1]/div[4]/button[3]')))
-            driver.find_element_by_xpath('//*[@id="missions"]/div/div[7]/div[1]/div[4]/button[3]').click()
+            driver.find_element_by_xpath('//*[@id="missions"]/div/div[4]/div[1]/div[4]/button[3]').click()
             element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions_rewards"]/button')))
-            element = wait.until(EC.element_located_to_be_selected((By.XPATH, '//*[@id="missions_rewards"]/button')))
             driver.find_element_by_xpath('//*[@id="missions_rewards"]/button').click()
             # прибавляем 1 к количеству выполненных дейликов
             dailies_count = dailies_count + 1
     else:
         element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="missions"]/div/div[6]/button')))
-        driver.find_element_by_xpath('//*[@id="missions"]/div/div[6]/button').click()
+        driver.find_element_by_xpath('//*[@id="missions"]/div/div[3]/button').click()
 
 except Exception as e:
     print('Ошибка:\n', traceback.format_exc())
